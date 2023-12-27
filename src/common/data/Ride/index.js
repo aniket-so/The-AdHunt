@@ -46,12 +46,12 @@ export const MENU_LEFT_ITEMS = [
     offset: '70',
   },
   {
-    label: 'Ride',
+    label: 'Buy Ad Spot',
     path: '#ride_section',
     offset: '70',
   },
   {
-    label: 'Fare Estimate',
+    label: 'List Your Platform',
     path: '#fare_section',
     offset: '70',
   },
