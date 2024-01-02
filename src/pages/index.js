@@ -20,6 +20,7 @@ import Footer from 'containers/Agency/Footer';
 import { DrawerProvider } from 'common/contexts/DrawerContext';
 import FaqSection from 'containers/Agency/FaqSection';
 import Ride from './ride';
+import Food from "./fooddelivery"
 
 const Main = () => {
 	return (
@@ -60,7 +61,7 @@ const Main = () => {
 					<NewsletterSection />
 					<Footer />
 				</AgencyWrapper> */}
-				<Ride/>
+				<Food/>
 				{/* End of agency wrapper section */}
 			</Fragment>
 		</ThemeProvider>
