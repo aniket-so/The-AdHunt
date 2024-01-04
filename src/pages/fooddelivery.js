@@ -19,6 +19,7 @@ import Clients from '../containers/FoodDelivery/Clients';
 import DownloadApp from '../containers/FoodDelivery/DownloadApp';
 import Gallery from '../containers/FoodDelivery/Gallery';
 import CallToAction from '../containers/FoodDelivery/CallToAction';
+import Faq from 'containers/FoodDelivery/Faq';
 import Footer from '../containers/FoodDelivery/Footer';
 
 const FoodDelivery = () => {
@@ -43,15 +44,16 @@ const FoodDelivery = () => {
           </Sticky>
           <Banner />
           <AvailableRestaurants />
-          <PopularCategory />
+          {/* <PopularCategory /> */}
           <HowWorks />
-          <ProductDelivery />
-          <QualityFeatures />
-          <Clients />
-          <Testimonials />
-          <DownloadApp />
-          <Gallery />
+          {/* <ProductDelivery /> */}
+          {/* <QualityFeatures /> */}
+          {/* <Clients /> */}
+          {/* <Testimonials /> */}
+          {/* <DownloadApp /> */}
+          {/* <Gallery /> */}
           <CallToAction />
+          <Faq/>
           <Footer />
         </ContentWrapper>
       </Fragment>

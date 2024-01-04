@@ -13,7 +13,8 @@ import { DrawerContext } from 'common/contexts/DrawerContext';
 import { MENU_ITEMS } from 'common/data/FoodDelivery';
 import ScrollSpyMenu from 'common/components/ScrollSpyMenu';
 
-import LogoImage from 'common/assets/image/foodDelivery/logo-dark.png';
+// import LogoImage from 'common/assets/image/foodDelivery/logo-dark.png';
+import LogoImage from 'common/assets/image/foodDelivery/the-ad-hunt-logo.png';
 
 const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
   const { state, dispatch } = useContext(DrawerContext);
@@ -37,11 +38,11 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
             className="main-logo"
           />
           <Box {...menuWrapper} className="mainMenuWrapper">
-            <ScrollSpyMenu
+            {/* <ScrollSpyMenu
               className="main_menu"
               menuItems={MENU_ITEMS}
               offset={-70}
-            />
+            /> */}
             <Link href="#" className="navbar_button">
               <Button {...button} title="Login Now" />
             </Link>

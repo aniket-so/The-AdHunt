@@ -4,7 +4,7 @@ export const CALL_TO_ACTION_DATA = {
   text: 'Pick one of our stock themes, or create your custom theme \nwith the most advanced theme editor on any online.',
   image: callToActionImage,
   link: {
-    label: 'Order More',
+    label: 'Advertise Now​',
     path: '#',
   },
 };
@@ -163,7 +163,7 @@ export const HOW_WORKS_DATA = {
   posts: [
     {
       icon: howWorksImage1,
-      title: 'Become a Delivery Man',
+      title: 'Find',
       text: "As a delivery driver, you'll make reliable money—working anytime, anywhere.",
       link: {
         label: 'Start Earning',
@@ -172,7 +172,7 @@ export const HOW_WORKS_DATA = {
     },
     {
       icon: howWorksImage2,
-      title: 'Become a Partner',
+      title: 'Plan',
       text: 'Grow your business and reach new customers by partnering with us.',
       link: {
         label: 'Sign up your store',
@@ -181,7 +181,7 @@ export const HOW_WORKS_DATA = {
     },
     {
       icon: howWorksImage3,
-      title: 'Try Android/iOS App',
+      title: 'Buy',
       text: 'Get the best DoorDash experience with live order tracking.',
       link: {
         label: 'Get the app',
@@ -276,62 +276,62 @@ export const AVAILABLE_RESTAURANTS_DATA = {
   posts: [
     {
       image: availableRestaurantImage1,
-      title: 'Pizza Hut Delicious Pizza',
+      title: 'Hotstar',
       link: '#',
       categories: [
-        { name: 'American' },
-        { name: 'Fast Food' },
-        { name: 'Burgers' },
+        { name: 'OTT' },
+        { name: '237.7M Monthly Unique Users' },
+        { name: '₹2,76,667 Min Spend' },
       ],
     },
     {
       image: availableRestaurantImage2,
-      title: 'Chipotle Mexican Grill (2675 Geary Boulevard)',
+      title: 'YouTube',
       link: '#',
       categories: [
-        { name: 'American' },
-        { name: 'Fast Food' },
-        { name: 'Burgers' },
+        { name: 'Social Media' },
+        { name: '735.4M Monthly Unique Users' },
+        { name: '₹10,000 Min Spend' },
       ],
     },
     {
       image: availableRestaurantImage3,
-      title: "McDonald's® Burgers (Fillmore)",
+      title: "Facebook",
       link: '#',
       categories: [
-        { name: 'American' },
-        { name: 'Fast Food' },
-        { name: 'Burgers' },
+        { name: 'Social Media' },
+        { name: '469.6M Monthly Unique Users' },
+        { name: '₹10,000 Min Spend' },
       ],
     },
     {
       image: availableRestaurantImage4,
-      title: 'The Baked Bear San Francisco',
+      title: 'Jio Savan',
       link: '#',
       categories: [
-        { name: 'American' },
-        { name: 'Fast Food' },
-        { name: 'Burgers' },
+        { name: 'Music' },
+        { name: '50.4M Monthly Unique Users' },
+        { name: '₹1,43,000 Min Spend' },
       ],
     },
     {
       image: availableRestaurantImage5,
-      title: 'Shake Shack  (3060 Fillmore Street)',
+      title: 'Google Display',
       link: '#',
       categories: [
-        { name: 'American' },
-        { name: 'Fast Food' },
-        { name: 'Burgers' },
+        { name: 'Performance Marketing' },
+        { name: 'N/A' },
+        { name: '₹10,000 Min Spend' },
       ],
     },
     {
       image: availableRestaurantImage6,
-      title: 'Chubby Noodle Chinese Takeout',
+      title: 'Times of India',
       link: '#',
       categories: [
-        { name: 'American' },
-        { name: 'Fast Food' },
-        { name: 'Burgers' },
+        { name: 'News' },
+        { name: '53.8M Monthly Unique Users' },
+        { name: '₹11,000 Min Spend' },
       ],
     },
   ],

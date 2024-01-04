@@ -7,7 +7,7 @@ import Box from 'common/components/Box';
 import Logo from 'common/components/UIElements/Logo';
 import FooterWrapper from './footer.style';
 
-import LogoImage from 'common/assets/image/foodDelivery/logo-dark.png';
+import LogoImage from 'common/assets/image/foodDelivery/the-ad-hunt-logo.png';
 import facebookIcon from 'common/assets/image/foodDelivery/footer-fb.svg';
 import twitterIcon from 'common/assets/image/foodDelivery/footer-twitter.svg';
 import dribbleIcon from 'common/assets/image/foodDelivery/footer-dribbble.svg';
