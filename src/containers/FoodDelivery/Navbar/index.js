@@ -38,16 +38,14 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
             className="main-logo"
           />
           <Box {...menuWrapper} className="mainMenuWrapper">
-            {/* <ScrollSpyMenu
-              className="main_menu"
-              menuItems={MENU_ITEMS}
-              offset={-70}
-            /> */}
             <Link href="#" className="navbar_button">
+              <Button {...button} title="Talk To Us" />
+            </Link>
+            <Link href="#" className="">
               <Button {...button} title="Login Now" />
             </Link>
-            <Link href="#" className="navbar_button_two">
-              <Button {...button} title="Join Free" />
+            <Link href="#" className="" style={{marginRight: "10px"}}>
+              <Button {...button} title="Sign Up"/>
             </Link>
             <Drawer
               width="420px"

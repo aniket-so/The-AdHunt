@@ -6,10 +6,11 @@ import Text from 'common/components/Text';
 import NextImage from 'common/components/NextImage';
 import Box from 'common/components/Box';
 import mapPin from 'common/assets/image/foodDelivery/banner-map-pin.svg';
-import arrowIcon from 'common/assets/image/foodDelivery/banner-arrow.svg';
 import BannerWrapper from './banner.style';
 import { BANNER_DATA } from 'common/data/FoodDelivery';
 import { Fade } from 'react-awesome-reveal';
+import SearchComponent from '../SearchComponent/SearchComponent';
+
 const Banner = () => {
   const { sectionImage, title, text, tagLine, buttons } = BANNER_DATA;
   return (
@@ -23,23 +24,10 @@ const Banner = () => {
               Your Address
             </label>
             <img className="mapPin" src={mapPin?.src} alt={title} />
-            <input type="text" placeholder="Enter your address.." />
-            <button type="submit" className="bannerBtn">
-              <img src={arrowIcon?.src} alt="banner button" />
-            </button>
+            {/* <input type="text" placeholder="Search Channel, Media.." /> */}
+            <SearchComponent/>
           </form>
           <Text as="p" className="tagLine" content={tagLine} />
-          <Box className="buttonWrap">
-            {buttons.map(({ icon, text, title, link }, index) => (
-              <Link href={link} key={`banner-button-${index}`} className="bannerAppBtn">
-                <img src={icon?.src} width="30" height="30" alt={title} />
-                <Box className="btnContent">
-                  <Text as="span" content={text} />
-                  <Text as="p" content={title} />
-                </Box>
-              </Link>
-            ))}
-          </Box>
         </Box>
         <Fade direction='right' triggerOnce>
           <Box className="image">

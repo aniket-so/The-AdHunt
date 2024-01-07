@@ -1,7 +1,7 @@
 import callToActionImage from 'common/assets/image/foodDelivery/call-to-action-1.png';
 export const CALL_TO_ACTION_DATA = {
-  title: 'Your order knocking on \nthe door. Please receive',
-  text: 'Pick one of our stock themes, or create your custom theme \nwith the most advanced theme editor on any online.',
+  title: 'Seek, Select, Succeed – The Ad Hunt Way',
+  text: 'Launch your campaigns and track your data-driven success. Map out your advertising mastery!',
   image: callToActionImage,
   link: {
     label: 'Advertise Now​',
@@ -164,7 +164,7 @@ export const HOW_WORKS_DATA = {
     {
       icon: howWorksImage1,
       title: 'Find',
-      text: "As a delivery driver, you'll make reliable money—working anytime, anywhere.",
+      text: "Check out our recommendations, platform profiles, reviews, and ratings",
       link: {
         label: 'Start Earning',
         path: '#',
@@ -173,7 +173,7 @@ export const HOW_WORKS_DATA = {
     {
       icon: howWorksImage2,
       title: 'Plan',
-      text: 'Grow your business and reach new customers by partnering with us.',
+      text: 'Check which platform to choose for awareness, lead generation, sales, and website visits. Plan your budget and review estimated results',
       link: {
         label: 'Sign up your store',
         path: '#',
@@ -182,7 +182,7 @@ export const HOW_WORKS_DATA = {
     {
       icon: howWorksImage3,
       title: 'Buy',
-      text: 'Get the best DoorDash experience with live order tracking.',
+      text: 'Create your first ad for your brand using our tool on your favorite ad platform',
       link: {
         label: 'Get the app',
         path: '#',
@@ -343,9 +343,9 @@ import bannerBtn2 from 'common/assets/image/foodDelivery/banner-google-play.svg'
 
 export const BANNER_DATA = {
   sectionImage: bannerImage,
-  title: 'Your favorite food, delivered your home',
-  text: 'Food, drinks, groceries, and more available for delivery and pickup.',
-  tagLine: 'Apps Available to download on',
+  title: "Hyderabad's top ad buying platform",
+  text: 'OTT, Websites, Apps, Digital news sites',
+  tagLine: 'Digital Ad Platforms',
   buttons: [
     {
       icon: bannerBtn1,

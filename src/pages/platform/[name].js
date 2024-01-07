@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Sticky from 'react-stickynode';
 import { ThemeProvider } from 'styled-components';
@@ -19,6 +20,12 @@ import { GlobalStyle, InteriorWrapper, ContentWrapper } from 'containers/Interio
 import Counter from 'containers/WebApp/Counter';
 
 const Interior = () => {
+    const router = useRouter();
+  const { name } = router.query;
+  const capitalizeFirstLetter = (str) => {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  };
+  const formattedName = capitalizeFirstLetter(name);
   return (
     <ThemeProvider theme={interiorTheme}>
       <Fragment>
@@ -45,16 +52,8 @@ const Interior = () => {
           </Sticky>
           <ContentWrapper>
             <Banner />
-            <Feature />
-            <AboutUs />
-            <Project />
-            <Team />
-            <News />
-            <Testimonial />
-            <Gallery />
             <Counter/>
           </ContentWrapper>
-          <Footer />
         </InteriorWrapper>
         {/* End of markup section. */}
       </Fragment>

@@ -124,6 +124,24 @@ export const bannerData = {
       title: 'Corner',
       link: '#1',
     },
+    {
+      id: 4,
+      thumb_url: slide3,
+      title: 'News',
+      link: '#1',
+    },
+    {
+      id: 5,
+      thumb_url: slide3,
+      title: 'Enternamint',
+      link: '#1',
+    },
+    {
+      id: 6,
+      thumb_url: slide3,
+      title: 'Music',
+      link: '#1',
+    },
   ],
 };
 

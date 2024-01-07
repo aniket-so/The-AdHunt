@@ -26,11 +26,11 @@ const Banner = () => {
   const { discount, discountLabel, title, text, carousel } = bannerData;
   const glideOptions = {
     type: 'carousel',
-    perView: 3,
+    perView: 4,
     gap: 20,
     breakpoints: {
       1200: {
-        perView: 2,
+        perView: 4,
       },
       667: {
         perView: 2,
@@ -76,41 +76,6 @@ const Banner = () => {
   return (
     <BannerWrapper>
       <Container>
-        <ContentArea>
-          <Fade direction='down' triggerOnce delay={30}>
-            <HighlightedText>
-              <strong>{discount}</strong> {discountLabel}
-            </HighlightedText>
-            <Heading as="h1" content={title} />
-            <Text content={text} />
-            <FormWrapper onSubmit={handleSubscriptionForm}>
-              <Input
-                className={state.valid}
-                type="email"
-                placeholder="Enter email address"
-                icon={<Icon icon={iosEmailOutline} />}
-                iconPosition="left"
-                required={true}
-                onChange={handleOnChange}
-                aria-label="email"
-              />
-              <ButtonGroup>
-                <Button
-                  type="submit"
-                  colors="primaryWithBg"
-                  title="FREE CONSULT"
-                />
-                <Button
-                  title="EXPLORE MORE"
-                  variant="textButton"
-                  icon={<i className="flaticon-next" />}
-                />
-              </ButtonGroup>
-            </FormWrapper>
-          </Fade>
-        </ContentArea>
-        {/* End of content section */}
-
         <CarouselArea>
           {loading ? (
             <GlideCarousel

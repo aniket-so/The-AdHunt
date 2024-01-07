@@ -21,7 +21,7 @@ const shake = keyframes`
 const BannerWrapper = styled.div`
   padding-top: 30px;
   margin-bottom: 81px;
-  background-color: ${themeGet('colors.banner', '#171717')};
+  background-color: #FFF2D9;
   @media only screen and (max-width: 1440px) {
     margin-bottom: 60px;
   }
@@ -210,18 +210,18 @@ export const ButtonGroup = styled.div`
 `;
 
 export const CarouselArea = styled.div`
-  width: calc(100% - 595px);
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   @media only screen and (max-width: 1600px) {
-    width: calc(100% - 560px);
+    width: 100%;
   }
   @media only screen and (max-width: 1360px) {
-    width: 60%;
+    width: 100%;
   }
   @media only screen and (max-width: 1200px) {
-    width: 55%;
+    width: 100%;
   }
   @media only screen and (max-width: 767px) {
     width: 100%;
