@@ -8,40 +8,47 @@ import NextImage from 'common/components/NextImage';
 import Box from 'common/components/Box';
 import AvailableRestaurantsWrapper from './availableRestaurants.style';
 import { AVAILABLE_RESTAURANTS_DATA } from 'common/data/FoodDelivery';
-const AvailableRestaurants = () => {
+import AdsImage from 'common/assets/image/foodDelivery/ads-placeholder.png'
+
+
+const AvailableRestaurants = ({platform}) => {
+  console.log(platform)
   const { title, posts } = AVAILABLE_RESTAURANTS_DATA;
   return (
     <AvailableRestaurantsWrapper id="restaurants">
       <Container>
         <Heading as="h2" content={title} />
         <Box className="postWrap">
-          {posts.map(({ image, title, link, categories }, index) => (
+          {platform.map((data, index) => (
             <Box
               className="post"
               key={`available-restaurant-post-key-${index}`}
             >
-              <NextImage src={image} alt={title} />
+              <NextImage src={AdsImage} alt={title} />
               <h3>
-                <Link href={link}>
-                  {title}
+                <Link href={`/platform/${data.slug}`}>
+                  {data.name} - {data.type}
                 </Link>
               </h3>
+              <p>{data.key_insights[0].monthly_unique_users}M Mothly Unique Users</p>
+              {
+                data.min_spends ? <p>{data.min_spends} Minimum Spends</p> : null
+              }
+              
               <Box className="postMeta">
-                {categories.map(({ name }, index) => (
                   <Link
-                    href={link}
-                    key={`available-restaurant-category-key-${index}`}
+                  href={`/platform/${data.slug}`}
+                    key={`available-restaurant-category-key-${data.id}`}
                     className="categoryItem"
                   >
-                    {name}
+                    Read More
                   </Link>
-                ))}
               </Box>
             </Box>
           ))}
         </Box>
         <Box className="text-center">
-          <Link href="#" className="MoreButton">
+          <Link href="/search" className="MoreButton">
             Discover More <Icon size={14} icon={arrowRight} />
           </Link>
         </Box>

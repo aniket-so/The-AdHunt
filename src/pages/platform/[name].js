@@ -13,12 +13,12 @@ import Counter from 'containers/WebApp/Counter';
 import Navbar from 'containers/FoodDelivery/Navbar';
 
 const Interior = () => {
-    const router = useRouter();
+  const router = useRouter();
   const { name } = router.query;
   const capitalizeFirstLetter = (str) => {
     return str.charAt(0).toUpperCase() + str.slice(1);
   };
-  const formattedName = capitalizeFirstLetter(name);
+  const formattedName = capitalizeFirstLetter(name || '');
   return (
     <ThemeProvider theme={interiorTheme}>
       <Fragment>
@@ -44,8 +44,8 @@ const Interior = () => {
             </DrawerProvider>
           </Sticky>
           <ContentWrapper>
+            <Counter />
             <Banner />
-            <Counter/>
           </ContentWrapper>
         </InteriorWrapper>
         {/* End of markup section. */}
@@ -53,4 +53,5 @@ const Interior = () => {
     </ThemeProvider>
   );
 };
+
 export default Interior;

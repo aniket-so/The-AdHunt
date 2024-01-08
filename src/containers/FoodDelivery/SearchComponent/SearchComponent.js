@@ -17,7 +17,7 @@ const SearchComponent = () => {
             const { data } = await response.json();
             const names = data.map((item) => item.name);
             setSearchResults(names);
-            setShowDropdown(true); // Show dropdown when search results are available
+            setShowDropdown(true);
         } catch (error) {
             console.error('Error fetching data:', error);
         }

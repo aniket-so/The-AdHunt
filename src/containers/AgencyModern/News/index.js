@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Link from 'next/link';
 
 import Container from 'common/components/UI/Container';
 import Text from 'common/components/Text';
@@ -6,31 +7,41 @@ import Heading from 'common/components/Heading';
 import BlogPost from 'common/components/BlogPost';
 import NextImage from 'common/components/NextImage';
 
-import SectionWrapper, { SectionHeading, NewsWrapper } from './news.style';
+import SectionWrapper, { SectionHeading, NewsWrapper, SearchBar } from './news.style'; // Import the new styled components
 
-import data from 'common/data/AgencyModern';
-import comment from 'common/assets/image/agencyModern/comment.png';
+import AdsPalceholder from "common/assets/image/foodDelivery/ads-placeholder.png";
 
-const News = () => {
+const News = ({ platform }) => {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const filteredPosts = platform.filter(post =>
+    post.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <SectionWrapper id="news">
       <Container>
         <SectionHeading>
-          <Heading as="h2" content="Popular blog post we update everyday" />
-          <Text content="Focus only on the meaning, we take care of the design. As soon as the meeting end you can export in one click." />
+          <Heading as="h2" content="Search Platform" />
+          <Text content="Focus only on the meaning, we take care of the design. As soon as the meeting ends you can export in one click." />
         </SectionHeading>
+
+          <input
+            type="text"
+            placeholder="Search Platform"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+
         <NewsWrapper>
-          {data.posts.map((post) => (
+          {filteredPosts.map((post) => (
             <BlogPost
-              key={`news-${post.id}`}
-              thumbUrl={post.icon}
-              title={post.title}
-              link={
-                <React.Fragment>
-                  <img src={comment?.src} alt="comment" /> {post.comments_count}
-                  comments
-                </React.Fragment>
-              }
+              key={post.id}
+              thumbUrl={AdsPalceholder}
+              title={post.name}
+              excerpt={post.short_description}
+              ott={post.type}
+              post={post}
             />
           ))}
         </NewsWrapper>

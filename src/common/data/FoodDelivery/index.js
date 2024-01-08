@@ -167,7 +167,7 @@ export const HOW_WORKS_DATA = {
       text: "Check out our recommendations, platform profiles, reviews, and ratings",
       link: {
         label: 'Start Earning',
-        path: '#',
+        path: '/search',
       },
     },
     {
@@ -176,7 +176,7 @@ export const HOW_WORKS_DATA = {
       text: 'Check which platform to choose for awareness, lead generation, sales, and website visits. Plan your budget and review estimated results',
       link: {
         label: 'Sign up your store',
-        path: '#',
+        path: '/talk-to-us',
       },
     },
     {
@@ -340,9 +340,10 @@ export const AVAILABLE_RESTAURANTS_DATA = {
 import bannerImage from 'common/assets/image/foodDelivery/banner-1.png';
 import bannerBtn1 from 'common/assets/image/foodDelivery/banner-apple.svg';
 import bannerBtn2 from 'common/assets/image/foodDelivery/banner-google-play.svg';
+import bannerAdhunt from 'common/assets/image/foodDelivery/banner-adhunt.png';
 
 export const BANNER_DATA = {
-  sectionImage: bannerImage,
+  sectionImage: bannerAdhunt,
   title: "Hyderabad's top ad buying platform",
   text: 'OTT, Websites, Apps, Digital news sites',
   tagLine: 'Digital Ad Platforms',
