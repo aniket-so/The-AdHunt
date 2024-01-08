@@ -31,14 +31,14 @@ const Navbar = ({ navbarStyle, logoStyle, button, row, menuWrapper }) => {
       <Container>
         <Box {...row}>
           <Logo
-            href="#"
+            href="/"
             logoSrc={LogoImage}
             title="Agency"
             logoStyle={logoStyle}
             className="main-logo"
           />
           <Box {...menuWrapper} className="mainMenuWrapper">
-            <Link href="#" className="navbar_button">
+            <Link href="/talk-to-us" className="navbar_button">
               <Button {...button} title="Talk To Us" />
             </Link>
             <Link href="#" className="">
