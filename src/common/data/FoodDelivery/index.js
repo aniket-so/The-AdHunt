@@ -1,4 +1,5 @@
 import callToActionImage from 'common/assets/image/foodDelivery/call-to-action-1.png';
+// import callToActionImage from 'common/assets/image/foodDelivery/cta-image.png';
 export const CALL_TO_ACTION_DATA = {
   title: 'Seek, Select, Succeed – The Ad Hunt Way',
   text: 'Launch your campaigns and track your data-driven success. Map out your advertising mastery!',

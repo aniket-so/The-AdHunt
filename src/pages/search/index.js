@@ -65,7 +65,7 @@ const FoodDelivery = () => {
           </Sticky>
           {/* <Banner /> */}
           <div style={{marginTop: "100px"}}>
-            <News platform={searchResults} />
+            {searchResults ? <News platform={searchResults} /> : null}
           </div>
           <Footer />
         </ContentWrapper>

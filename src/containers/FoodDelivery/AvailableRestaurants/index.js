@@ -12,7 +12,6 @@ import AdsImage from 'common/assets/image/foodDelivery/ads-placeholder.png'
 
 
 const AvailableRestaurants = ({platform}) => {
-  console.log(platform)
   const { title, posts } = AVAILABLE_RESTAURANTS_DATA;
   return (
     <AvailableRestaurantsWrapper id="restaurants">

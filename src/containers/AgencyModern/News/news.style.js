@@ -43,7 +43,7 @@ export const NewsWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   .blog_post {
-    width: calc((100% / 3) - 15px);
+    width: calc((100% / 4) - 15px);
     margin: 50px 0 0 0;
     @media screen and (max-width: 991px) {
       width: calc((100% / 2) - 15px);
