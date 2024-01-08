@@ -12,13 +12,18 @@ import { GlobalStyle, InteriorWrapper, ContentWrapper } from 'containers/Interio
 import Counter from 'containers/WebApp/Counter';
 import Navbar from 'containers/FoodDelivery/Navbar';
 
+function generateSlug(name) {
+  return name
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]/g, '')
+    .replace(/-{2,}/g, '-');
+}
+
 const Interior = () => {
   const router = useRouter();
   const { name } = router.query;
-  const capitalizeFirstLetter = (str) => {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  };
-  const formattedName = capitalizeFirstLetter(name || '');
+  const formattedName = generateSlug(name || '');
   return (
     <ThemeProvider theme={interiorTheme}>
       <Fragment>
