@@ -18,11 +18,12 @@ import BannerWrapper, {
   ButtonGroup,
   CarouselArea,
 } from './banner.style';
+import slide1 from 'common/assets/image/interior/slider/slide-1.png';
 
 import { bannerData } from 'common/data/Interior';
 import { Fade } from 'react-awesome-reveal';
 
-const Banner = () => {
+const Banner = ({filterData}) => {
   const { discount, discountLabel, title, text, carousel } = bannerData;
   const glideOptions = {
     type: 'carousel',
@@ -85,11 +86,11 @@ const Banner = () => {
               prevButton={<span className="prev_arrow" />}
             >
               <Fragment>
-                {carousel.map((item) => (
+                {filterData.map((item) => (
                   <GlideSlide key={`carousel_key${item.id}`}>
-                    <Link href={item.link} className="item_wrapper">
-                      <Image src={item.thumb_url?.src} alt={item.title} />
-                      <Heading as="h4" content={item.title} />
+                    <Link href="#" className="item_wrapper">
+                      <Image src={slide1} alt={item.id} />
+                      <Heading as="h4" content={item.name} />
                     </Link>
                   </GlideSlide>
                 ))}

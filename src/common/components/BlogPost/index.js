@@ -7,7 +7,6 @@ const BlogPost = ({ className, thumbUrl, title, excerpt, link, ott,post }) => {
   // Add all classes to an array
   const addAllClasses = ['blog_post'];
 
-  // className prop checking
   if (className) {
     addAllClasses.push(className);
   }

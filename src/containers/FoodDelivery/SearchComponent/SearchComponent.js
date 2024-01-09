@@ -27,7 +27,7 @@ const SearchComponent = () => {
         const value = e.target.value;
         setSearchTerm(value);
         if (value.trim() === '') {
-            setShowDropdown(false); // Hide dropdown when input is empty
+            setShowDropdown(false);
         }
     };
 

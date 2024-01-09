@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import Sticky from 'react-stickynode';
@@ -20,10 +20,27 @@ function generateSlug(name) {
     .replace(/-{2,}/g, '-');
 }
 
-const Interior = () => {
+const Interior = ({item, adOptions}) => {
   const router = useRouter();
   const { name } = router.query;
   const formattedName = generateSlug(name || '');
+
+  const filterItemByName = (data, targetName) => {
+    const sanitizedTargetName = targetName.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+    
+    return data.find((item) => {
+      const sanitizedItemName = item.name.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+      return sanitizedItemName === sanitizedTargetName;
+    });
+  };
+
+  const filteredItem = filterItemByName(item.data, name);
+
+  const { id } = filteredItem;
+
+  const filteredAdOptions = adOptions.data
+  .filter(option => option.media && option.media.key === id)
+
   return (
     <ThemeProvider theme={interiorTheme}>
       <Fragment>
@@ -50,13 +67,30 @@ const Interior = () => {
           </Sticky>
           <ContentWrapper>
             <Counter />
-            <Banner />
+            <Banner filterData={filteredAdOptions} />
           </ContentWrapper>
         </InteriorWrapper>
-        {/* End of markup section. */}
       </Fragment>
     </ThemeProvider>
   );
 };
+
+
+export async function getServerSideProps(context) {
+  const itemApiUrl = 'http://172.203.170.19:8055/items/items/?access_token=Qmm3cucjSQAOwXPilvrRb8qW_El8lET1';
+  const itemResponse = await fetch(itemApiUrl);
+  const itemData = await itemResponse.json();
+
+  const adOptionsApiUrl = 'http://172.203.170.19:8055/items/ad_options/?access_token=Qmm3cucjSQAOwXPilvrRb8qW_El8lET1';
+  const adOptionsResponse = await fetch(adOptionsApiUrl);
+  const adOptionsData = await adOptionsResponse.json();
+
+  return {
+    props: {
+      item: { data: itemData.data },
+      adOptions: { data: adOptionsData.data },
+    },
+  };
+}
 
 export default Interior;
