@@ -8,7 +8,7 @@ import React from 'react';
 import { Icon } from 'react-icons-kit';
 import { androidArrowForward } from 'react-icons-kit/ionicons/androidArrowForward';
 import CounterArea, { Row } from './counter.style';
-const Counter = () => {
+const Counter = ({counterData}) => {
   const { blockTitle, posts } = COUNTER_DATA;
   const { title, text, button } = blockTitle;
   return (
@@ -16,8 +16,11 @@ const Counter = () => {
       <Container>
         <Row>
           <Box className="blockTitle">
-            <Heading as="h2" content={title} />
-            <Text as="p" content={text} />
+            <Heading as="h2" content={counterData ? counterData.name : title} />
+            <Text as="p" content={counterData ? counterData.additional_information : text} />
+            {
+              counterData ? <p>Dimension : {counterData.ad_asset_dimensions}</p> : null
+            }
             <Link href={button.link} className="button">
               <span>
                 {button.label}

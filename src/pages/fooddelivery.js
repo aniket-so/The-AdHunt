@@ -31,7 +31,7 @@ const FoodDelivery = () => {
         const handleSearch = async () => {
             try {
               const response = await fetch(
-                `https://172.203.170.19:8055/items/items/?access_token=Qmm3cucjSQAOwXPilvrRb8qW_El8lET1`
+                `http://172.203.170.19:8055/items/items/?access_token=Qmm3cucjSQAOwXPilvrRb8qW_El8lET1`
               );
               const { data } = await response.json();
               const modifiedData = data.map(post => ({

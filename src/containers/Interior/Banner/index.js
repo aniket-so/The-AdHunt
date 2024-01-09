@@ -23,7 +23,7 @@ import slide1 from 'common/assets/image/interior/slider/slide-1.png';
 import { bannerData } from 'common/data/Interior';
 import { Fade } from 'react-awesome-reveal';
 
-const Banner = ({filterData}) => {
+const Banner = ({filterData, adname}) => {
   const { discount, discountLabel, title, text, carousel } = bannerData;
   const glideOptions = {
     type: 'carousel',
@@ -74,6 +74,8 @@ const Banner = ({filterData}) => {
     }
   };
 
+  const name = adname;
+
   return (
     <BannerWrapper>
       <Container>
@@ -88,7 +90,7 @@ const Banner = ({filterData}) => {
               <Fragment>
                 {filterData.map((item) => (
                   <GlideSlide key={`carousel_key${item.id}`}>
-                    <Link href="#" className="item_wrapper">
+                    <Link href="/platform/[name]/[subname]" as={`/platform/${name}/${item.name.replace(/\s+/g, '-')}`} className="item_wrapper">
                       <Image src={slide1} alt={item.id} />
                       <Heading as="h4" content={item.name} />
                     </Link>

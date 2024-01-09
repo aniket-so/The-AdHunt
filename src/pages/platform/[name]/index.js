@@ -20,7 +20,7 @@ function generateSlug(name) {
     .replace(/-{2,}/g, '-');
 }
 
-const Interior = ({item, adOptions}) => {
+const Name = ({item, adOptions}) => {
   const router = useRouter();
   const { name } = router.query;
   const formattedName = generateSlug(name || '');
@@ -67,7 +67,7 @@ const Interior = ({item, adOptions}) => {
           </Sticky>
           <ContentWrapper>
             <Counter />
-            <Banner filterData={filteredAdOptions} />
+            <Banner filterData={filteredAdOptions} adname={name} />
           </ContentWrapper>
         </InteriorWrapper>
       </Fragment>
@@ -77,11 +77,11 @@ const Interior = ({item, adOptions}) => {
 
 
 export async function getServerSideProps(context) {
-  const itemApiUrl = 'https://172.203.170.19:8055/items/items/?access_token=Qmm3cucjSQAOwXPilvrRb8qW_El8lET1';
+  const itemApiUrl = 'http://172.203.170.19:8055/items/items/?access_token=Qmm3cucjSQAOwXPilvrRb8qW_El8lET1';
   const itemResponse = await fetch(itemApiUrl);
   const itemData = await itemResponse.json();
 
-  const adOptionsApiUrl = 'https://172.203.170.19:8055/items/ad_options/?access_token=Qmm3cucjSQAOwXPilvrRb8qW_El8lET1';
+  const adOptionsApiUrl = 'http://172.203.170.19:8055/items/ad_options/?access_token=Qmm3cucjSQAOwXPilvrRb8qW_El8lET1';
   const adOptionsResponse = await fetch(adOptionsApiUrl);
   const adOptionsData = await adOptionsResponse.json();
 
@@ -93,4 +93,4 @@ export async function getServerSideProps(context) {
   };
 }
 
-export default Interior;
+export default Name;

@@ -1,5 +1,5 @@
-import callToActionImage from 'common/assets/image/foodDelivery/call-to-action-1.png';
-// import callToActionImage from 'common/assets/image/foodDelivery/cta-image.png';
+// import callToActionImage from 'common/assets/image/foodDelivery/call-to-action-1.png';
+import callToActionImage from 'common/assets/image/foodDelivery/seek-selected-adhunt.png';
 export const CALL_TO_ACTION_DATA = {
   title: 'Seek, Select, Succeed – The Ad Hunt Way',
   text: 'Launch your campaigns and track your data-driven success. Map out your advertising mastery!',
@@ -155,9 +155,9 @@ export const DELIVERY_PRODUCT_DATA = {
   ],
 };
 
-import howWorksImage1 from 'common/assets/image/foodDelivery/how-works-1.png';
-import howWorksImage2 from 'common/assets/image/foodDelivery/how-works-2.png';
-import howWorksImage3 from 'common/assets/image/foodDelivery/how-works-3.png';
+import howWorksImage1 from 'common/assets/image/foodDelivery/find-adhunt.png';
+import howWorksImage2 from 'common/assets/image/foodDelivery/plan-adhunt.png';
+import howWorksImage3 from 'common/assets/image/foodDelivery/buy-adhunt.png';
 
 export const HOW_WORKS_DATA = {
   title: 'Let’s see how it works',

@@ -18,18 +18,20 @@ const AvailableRestaurants = ({platform}) => {
       <Container>
         <Heading as="h2" content={title} />
         <Box className="postWrap">
-          {platform.map((data, index) => (
+          {platform.slice(0, 6).map((data, index) => (
             <Box
               className="post"
               key={`available-restaurant-post-key-${index}`}
             >
               <NextImage src={AdsImage} alt={title} />
               <h3>
-                <Link href={`/platform/${data.slug}`}>
+                <Link href={`/platform/[name]`} as={`/platform/${data.slug}`}>
                   {data.name} - {data.type}
                 </Link>
               </h3>
-              <p>{data.key_insights[0].monthly_unique_users}M Mothly Unique Users</p>
+              {data.key_insights && data.key_insights[0] && (
+                <p>{data.key_insights[0].monthly_unique_users ?? 'Data not available'}M Monthly Unique Users</p>
+              )}
               {
                 data.min_spends ? <p>{data.min_spends} Minimum Spends</p> : null
               }
