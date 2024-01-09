@@ -12,7 +12,7 @@ const SearchComponent = () => {
     const handleSearch = async () => {
         try {
             const response = await fetch(
-                `http://172.203.170.19:8055/items/items/?access_token=Qmm3cucjSQAOwXPilvrRb8qW_El8lET1`
+                `https://172.203.170.19:8055/items/items/?access_token=Qmm3cucjSQAOwXPilvrRb8qW_El8lET1`
             );
             const { data } = await response.json();
             const names = data.map((item) => item.name);

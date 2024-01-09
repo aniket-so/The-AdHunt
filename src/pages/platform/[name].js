@@ -77,11 +77,11 @@ const Interior = ({item, adOptions}) => {
 
 
 export async function getServerSideProps(context) {
-  const itemApiUrl = 'http://172.203.170.19:8055/items/items/?access_token=Qmm3cucjSQAOwXPilvrRb8qW_El8lET1';
+  const itemApiUrl = 'https://172.203.170.19:8055/items/items/?access_token=Qmm3cucjSQAOwXPilvrRb8qW_El8lET1';
   const itemResponse = await fetch(itemApiUrl);
   const itemData = await itemResponse.json();
 
-  const adOptionsApiUrl = 'http://172.203.170.19:8055/items/ad_options/?access_token=Qmm3cucjSQAOwXPilvrRb8qW_El8lET1';
+  const adOptionsApiUrl = 'https://172.203.170.19:8055/items/ad_options/?access_token=Qmm3cucjSQAOwXPilvrRb8qW_El8lET1';
   const adOptionsResponse = await fetch(adOptionsApiUrl);
   const adOptionsData = await adOptionsResponse.json();
 
